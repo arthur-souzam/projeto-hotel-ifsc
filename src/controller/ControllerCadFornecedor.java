@@ -53,7 +53,6 @@ public class ControllerCadFornecedor implements ActionListener {
             String fone1 = this.telaCadFornecedor.getjFormattedTextFieldFone1().getText().replaceAll("[^0-9]", "");
             String cidade = this.telaCadFornecedor.getjTextFieldCidade().getText();
             String cep = this.telaCadFornecedor.getjFormattedTextFieldCep().getText().replaceAll("[^0-9]", "");
-            String rg = this.telaCadFornecedor.getjFormattedTextFieldRg().getText().trim();
 
             if (nome.isBlank()) {
                  JOptionPane.showMessageDialog(this.telaCadFornecedor, "O Nome Fantasia/Contato é obrigatório!");
@@ -75,7 +74,7 @@ public class ControllerCadFornecedor implements ActionListener {
                 this.telaCadFornecedor.getjFormattedTextFieldFone1().requestFocus();
                 return;
             }
-             if (cep.isEmpty()) {
+             if (cep.isEmpty()) { // Validação do CEP adicionada
                 JOptionPane.showMessageDialog(this.telaCadFornecedor, "O CEP é obrigatório!");
                 this.telaCadFornecedor.getjFormattedTextFieldCep().requestFocus();
                 return;
@@ -85,11 +84,6 @@ public class ControllerCadFornecedor implements ActionListener {
                  this.telaCadFornecedor.getjTextFieldCidade().requestFocus();
                  return;
              }
-             if (rg.isEmpty()) {
-                 JOptionPane.showMessageDialog(this.telaCadFornecedor, "O RG é Obrigatório.");
-                 this.telaCadFornecedor.getjFormattedTextFieldRg().requestFocus();
-                 return;
-             }
 
             Fornecedor fornecedor = new Fornecedor();
             fornecedor.setNome(nome);
@@ -97,7 +91,7 @@ public class ControllerCadFornecedor implements ActionListener {
             fornecedor.setCnpj(cnpj);
             fornecedor.setInscricaoEstadual(this.telaCadFornecedor.getjTextFieldInscricaoEstadual().getText());
             fornecedor.setCpf(this.telaCadFornecedor.getjFormattedTextFieldCpf().getText().replaceAll("[^0-9]", ""));
-            fornecedor.setRg(rg);
+            fornecedor.setRg(this.telaCadFornecedor.getjTextFieldRg().getText());
             fornecedor.setFone1(fone1);
             fornecedor.setFone2(this.telaCadFornecedor.getjFormattedTextFieldFone2().getText().replaceAll("[^0-9]", ""));
             fornecedor.setEmail(this.telaCadFornecedor.getjTextFieldEmail().getText());
@@ -146,7 +140,7 @@ public class ControllerCadFornecedor implements ActionListener {
                 this.telaCadFornecedor.getjFormattedTextFieldCnpj().setText(fornecedor.getCnpj());
                 this.telaCadFornecedor.getjTextFieldInscricaoEstadual().setText(fornecedor.getInscricaoEstadual());
                 this.telaCadFornecedor.getjFormattedTextFieldCpf().setText(fornecedor.getCpf());
-                this.telaCadFornecedor.getjFormattedTextFieldRg().setText(fornecedor.getRg());
+                this.telaCadFornecedor.getjTextFieldRg().setText(fornecedor.getRg());
                 this.telaCadFornecedor.getjFormattedTextFieldFone1().setText(fornecedor.getFone1());
                 this.telaCadFornecedor.getjFormattedTextFieldFone2().setText(fornecedor.getFone2());
                 this.telaCadFornecedor.getjTextFieldEmail().setText(fornecedor.getEmail());
@@ -161,9 +155,11 @@ public class ControllerCadFornecedor implements ActionListener {
                 
                 SimpleDateFormat displayFormat = new SimpleDateFormat("dd/MM/yyyy");
                 try {
+                    // Tenta converter do formato yyyy-MM-dd (banco) para dd/MM/yyyy (tela)
                     Date data = new SimpleDateFormat("yyyy-MM-dd").parse(fornecedor.getDataCadastro());
                     this.telaCadFornecedor.getjFormattedTextFieldDataCadastro().setText(displayFormat.format(data));
                 } catch (Exception ex) {
+                    // Se der erro ou data for inválida, tenta mostrar o que veio do banco ou limpa
                     if(fornecedor.getDataCadastro() != null && !fornecedor.getDataCadastro().isEmpty()){
                          this.telaCadFornecedor.getjFormattedTextFieldDataCadastro().setText(fornecedor.getDataCadastro());
                     } else {
