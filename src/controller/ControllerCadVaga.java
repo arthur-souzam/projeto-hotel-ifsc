@@ -3,17 +3,17 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import model.bo.Vaga; // Atualizado
-import service.VagaService; // Atualizado
-import view.TelaBuscaVaga; // Atualizado
-import view.TelaCadastroVaga; // Atualizado
+import model.bo.Vaga; 
+import service.VagaService; 
+import view.TelaBuscaVaga; 
+import view.TelaCadastroVaga; 
 
-public class ControllerCadVaga implements ActionListener { // Renomeado
+public class ControllerCadVaga implements ActionListener { 
 
-    TelaCadastroVaga telaCadVaga; // Atualizado
+    TelaCadastroVaga telaCadVaga; 
     public static int codigo;
 
-    public ControllerCadVaga(TelaCadastroVaga telaCadVaga) { // Renomeado e Atualizado
+    public ControllerCadVaga(TelaCadastroVaga telaCadVaga) { 
         this.telaCadVaga = telaCadVaga;
 
         this.telaCadVaga.getjButtonNovo().addActionListener(this);
@@ -64,17 +64,17 @@ public class ControllerCadVaga implements ActionListener { // Renomeado
              
             if (metragem <= 0) { JOptionPane.showMessageDialog(this.telaCadVaga, "Metragem deve ser positiva!"); this.telaCadVaga.getjTextFieldMetragem().requestFocus(); return; }
 
-            Vaga vaga = new Vaga(); // Atualizado
+            Vaga vaga = new Vaga(); 
             vaga.setDescricao(descricao);
             vaga.setMetragemVaga(metragem);
             vaga.setObs(this.telaCadVaga.getjTextFieldObs().getText());
             vaga.setStatus('A');
 
             if (this.telaCadVaga.getjTextFieldId().getText().equalsIgnoreCase("")) {
-                VagaService.Criar(vaga); // Atualizado
+                VagaService.Criar(vaga); 
             } else {
                 vaga.setId(Integer.parseInt(this.telaCadVaga.getjTextFieldId().getText()));
-                VagaService.Atualizar(vaga); // Atualizado
+                VagaService.Atualizar(vaga); 
             }
 
             ativaDesativa(true);
@@ -88,12 +88,12 @@ public class ControllerCadVaga implements ActionListener { // Renomeado
 
         } else if (e.getSource() == this.telaCadVaga.getjButtonBuscar()) {
             codigo = 0;
-            TelaBuscaVaga telaBusca = new TelaBuscaVaga(null, true); // Atualizado
-            ControllerBuscaVaga controllerBusca = new ControllerBuscaVaga(telaBusca); // Atualizado
+            TelaBuscaVaga telaBusca = new TelaBuscaVaga(null, true); 
+            ControllerBuscaVaga controllerBusca = new ControllerBuscaVaga(telaBusca); 
             telaBusca.setVisible(true);
 
             if (codigo != 0) {
-                Vaga vaga = VagaService.Carregar(codigo); // Atualizado
+                Vaga vaga = VagaService.Carregar(codigo); 
                 ativaDesativa(false);
                 utilities.Utilities.limpaComponentes(this.telaCadVaga.getjPanelDados(), true);
 

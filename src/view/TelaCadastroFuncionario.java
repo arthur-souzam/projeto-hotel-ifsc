@@ -57,7 +57,7 @@ public class TelaCadastroFuncionario extends javax.swing.JDialog {
         return jFormattedTextFieldCpf;
     }
 
-    public JFormattedTextField getjFormattedTextFieldRg() { // Alterado
+    public JFormattedTextField getjFormattedTextFieldRg() {
         return jFormattedTextFieldRg;
     }
     
@@ -130,7 +130,7 @@ public class TelaCadastroFuncionario extends javax.swing.JDialog {
         jLabelCpf = new javax.swing.JLabel();
         jFormattedTextFieldCpf = new javax.swing.JFormattedTextField();
         jLabelRg = new javax.swing.JLabel();
-        jFormattedTextFieldRg = new javax.swing.JFormattedTextField(); // Alterado
+        jFormattedTextFieldRg = new javax.swing.JFormattedTextField(); 
         jLabelFone1 = new javax.swing.JLabel();
         jFormattedTextFieldFone1 = new javax.swing.JFormattedTextField();
         jLabelFone2 = new javax.swing.JLabel();

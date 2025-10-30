@@ -3,13 +3,13 @@ package model.bo;
 public class Quarto {
     private int id;
     private String descricao;
-    private int capacidadeHospedes; // Corresponde a capacidade_hospedes
-    private float metragem; // Corresponde a metragem
-    private String identificacao; // Corresponde a identificacao
-    private int andar; // Corresponde a andar
-    private boolean flagAnimais; // Corresponde a flag_animais
-    private String obs; // Corresponde a obs
-    private char status; // Corresponde a status
+    private int capacidadeHospedes; 
+    private float metragem; 
+    private String identificacao; 
+    private int andar; 
+    private boolean flagAnimais; 
+    private String obs; 
+    private char status; 
 
     public Quarto() {
     }

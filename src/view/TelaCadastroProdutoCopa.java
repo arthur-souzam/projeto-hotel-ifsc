@@ -21,7 +21,7 @@ public class TelaCadastroProdutoCopa extends javax.swing.JDialog {
     public JPanel getjPanelDados() { return jPanelDados; }
     public JTextField getjTextFieldId() { return jTextFieldId; }
     public JTextField getjTextFieldDescricao() { return jTextFieldDescricao; }
-    public JTextField getjTextFieldValor() { return jTextFieldValor; } // Voltamos para JTextField
+    public JTextField getjTextFieldValor() { return jTextFieldValor; } 
     public JTextField getjTextFieldCodigoBarra() { return jTextFieldCodigoBarra; }
     public JTextField getjTextFieldStatus() { return jTextFieldStatus; } 
 
@@ -43,7 +43,7 @@ public class TelaCadastroProdutoCopa extends javax.swing.JDialog {
         jLabelDescricao = new javax.swing.JLabel();
         jTextFieldDescricao = new javax.swing.JTextField();
         jLabelValor = new javax.swing.JLabel();
-        jTextFieldValor = new javax.swing.JTextField(); // Voltamos para JTextField
+        jTextFieldValor = new javax.swing.JTextField(); 
         jLabelCodigoBarra = new javax.swing.JLabel();
         jTextFieldCodigoBarra = new javax.swing.JTextField();
         jLabelStatus = new javax.swing.JLabel(); 

@@ -51,8 +51,7 @@ public class CaixaDAO implements InterfaceDAO<Caixa> {
                 caixa.setId(rst.getInt("id"));
                 caixa.setDataAbertura(rst.getString("data_abertura"));
                 caixa.setDataFechamento(rst.getString("data_fechamento"));
-                caixa.setValorAbertura(rst.getFloat("valor_abertura"));
-                // Tratar valor_fechamento nulo
+                caixa.setValorAbertura(rst.getFloat("valor_abertura"));               
                 float valorFechamento = rst.getFloat("valor_fechamento");
                 if (!rst.wasNull()) {
                     caixa.setValorFechamento(valorFechamento);
@@ -149,9 +148,8 @@ public class CaixaDAO implements InterfaceDAO<Caixa> {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDataAbertura());
             pstm.setString(2, objeto.getDataFechamento());
-            pstm.setFloat(3, objeto.getValorAbertura());
-            // Tratar valor nulo no update
-            if (objeto.getValorFechamento() != 0) { // Ou outra lógica para identificar nulo
+            pstm.setFloat(3, objeto.getValorAbertura());           
+            if (objeto.getValorFechamento() != 0) { 
                  pstm.setFloat(4, objeto.getValorFechamento());
             } else {
                  pstm.setNull(4, java.sql.Types.FLOAT);

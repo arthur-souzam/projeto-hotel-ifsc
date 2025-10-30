@@ -244,7 +244,6 @@ public class FornecedorDAO implements InterfaceDAO<Fornecedor> {
         }
     }
     
-    // Método auxiliar para preencher o objeto Fornecedor a partir do ResultSet
     private void fillEntityFromResultSet(ResultSet rst, Fornecedor fornecedor) throws SQLException {
         fornecedor.setId(rst.getInt("id"));
         fornecedor.setNome(rst.getString("nome"));

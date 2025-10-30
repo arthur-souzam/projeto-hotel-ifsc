@@ -89,7 +89,7 @@ public class ControllerBuscaFornecedor implements ActionListener {
                     break;
                     
                 case "Razao Social":
-                    colunaNoBanco = "razao_social"; // Mapear para nome correto da coluna
+                    colunaNoBanco = "razao_social"; 
                     listaFornecedores = FornecedorService.Carregar(colunaNoBanco, valorFiltro);
                     break;
 

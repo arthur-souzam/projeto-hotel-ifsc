@@ -69,14 +69,11 @@ public class MovimentoCaixaDAO implements InterfaceDAO<MovimentoCaixa> {
 
                 int receberId = rst.getInt("receber_id");
                 if (!rst.wasNull()) {
-                     //Quando ReceberDAO existir:
-                     //ReceberDAO receberDAO = new ReceberDAO();
-                     //movimento.setReceber(receberDAO.Retrieve(receberId));
-                     Receber receber = new Receber(); // Placeholder
+                     Receber receber = new Receber(); 
                      receber.setId(receberId);
-                     movimento.setReceber(receber); // Define o receber com ID
+                     movimento.setReceber(receber); 
                 } else {
-                     movimento.setReceber(null); // Define como nulo se for nulo no banco
+                     movimento.setReceber(null); 
                 }
 
                 lista.add(movimento);

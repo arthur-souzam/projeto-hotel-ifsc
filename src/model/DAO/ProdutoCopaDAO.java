@@ -33,7 +33,7 @@ public class ProdutoCopaDAO implements InterfaceDAO<ProdutoCopa> {
 
     @Override
     public List<ProdutoCopa> Retrieve() {
-        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE status = 'A'"; // Corrigido decricao
+        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE status = 'A'"; 
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet rst = null;
@@ -62,7 +62,7 @@ public class ProdutoCopaDAO implements InterfaceDAO<ProdutoCopa> {
 
     @Override
     public ProdutoCopa Retrieve(int id) {
-        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE id = ?"; // Corrigido decricao
+        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE id = ?"; 
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet rst = null;
@@ -91,13 +91,13 @@ public class ProdutoCopaDAO implements InterfaceDAO<ProdutoCopa> {
     @Override
     public List<ProdutoCopa> Retrieve(String atributo, String valor) {
         String colunaBusca = atributo;
-         if (atributo.equalsIgnoreCase("descricao")) { // Se buscar por descrição
-             colunaBusca = "decricao"; // Usa o nome correto da coluna
+         if (atributo.equalsIgnoreCase("descricao")) { 
+             colunaBusca = "decricao"; 
          } else if (atributo.equalsIgnoreCase("codigo_barra")) {
              colunaBusca = "codigo_barra";
          }
 
-        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE " + colunaBusca + " LIKE ? AND status = 'A'"; // Corrigido decricao
+        String sqlInstrucao = "SELECT id, decricao, valor, codigo_barra, status FROM produto_copa WHERE " + colunaBusca + " LIKE ? AND status = 'A'"; 
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet rst = null;
@@ -111,7 +111,7 @@ public class ProdutoCopaDAO implements InterfaceDAO<ProdutoCopa> {
             while (rst.next()) {
                 ProdutoCopa produto = new ProdutoCopa();
                 produto.setId(rst.getInt("id"));
-                produto.setDescricao(rst.getString("decricao")); // Corrigido decricao
+                produto.setDescricao(rst.getString("decricao")); 
                 produto.setValor(rst.getFloat("valor"));
                 produto.setCodigoBarra(rst.getString("codigo_barra"));
                 produto.setStatus(rst.getString("status").charAt(0));
@@ -127,7 +127,7 @@ public class ProdutoCopaDAO implements InterfaceDAO<ProdutoCopa> {
 
     @Override
     public void Update(ProdutoCopa objeto) {
-        String sqlInstrucao = "UPDATE produto_copa SET decricao = ?, valor = ?, codigo_barra = ?, status = ? WHERE id = ?"; // Corrigido decricao
+        String sqlInstrucao = "UPDATE produto_copa SET decricao = ?, valor = ?, codigo_barra = ?, status = ? WHERE id = ?"; 
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
          boolean originalAutoCommitState = true;

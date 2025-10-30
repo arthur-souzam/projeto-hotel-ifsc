@@ -15,7 +15,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
     public JButton getjButtonCarregar() { return jButtonCarregar; }
     public JButton getjButtonSair() { return jButtonSair; }
     public JTable getjTableDados() { return jTableDados; }
-    public JButton getjButtonFiltar() { return jButtonFiltar; } // Correção no nome do getter
+    public JButton getjButtonFiltar() { return jButtonFiltar; } 
     public JComboBox<String> getjCBFiltro() { return jCBFiltro; }
     public JTextField getjTFFiltro() { return jTFFiltro; }
 
@@ -34,7 +34,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
         jLabelFiltrar = new javax.swing.JLabel();
         jTFFiltro = new javax.swing.JTextField();
         jLabelValor = new javax.swing.JLabel();
-        jButtonFiltar = new javax.swing.JButton(); // Nome corrigido
+        jButtonFiltar = new javax.swing.JButton(); 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busca de Quarto");
@@ -45,7 +45,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
         jPaneltitulo.setPreferredSize(new java.awt.Dimension(800, 50));
         jPaneltitulo.setLayout(new java.awt.BorderLayout());
 
-        jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); 
         jLabelTitulo.setForeground(new java.awt.Color(51, 0, 153));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Quartos");
@@ -98,7 +98,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
 
         jLabelValor.setText("Valor:");
 
-        jButtonFiltar.setText("Filtrar"); // Nome corrigido
+        jButtonFiltar.setText("Filtrar"); 
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
         jPanelDados.setLayout(jPanelDadosLayout);
@@ -152,7 +152,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
     }
 
     private javax.swing.JButton jButtonCarregar;
-    private javax.swing.JButton jButtonFiltar; // Nome corrigido
+    private javax.swing.JButton jButtonFiltar; 
     private javax.swing.JButton jButtonSair;
     private javax.swing.JComboBox<String> jCBFiltro;
     private javax.swing.JLabel jLabelFiltrar;

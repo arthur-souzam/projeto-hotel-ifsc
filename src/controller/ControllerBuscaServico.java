@@ -21,7 +21,7 @@ public class ControllerBuscaServico implements ActionListener {
         this.telaBusca.getjButtonFiltar().addActionListener(this);
         this.telaBusca.getjButtonSair().addActionListener(this);
         
-        carregarTabela(); // Adicionado para carregar ao iniciar
+        carregarTabela(); 
     }
     
     
@@ -29,7 +29,7 @@ public class ControllerBuscaServico implements ActionListener {
         DefaultTableModel tabela = (DefaultTableModel) this.telaBusca.getjTableDados().getModel();
         tabela.setRowCount(0);
 
-        List<Servico> listaServicos = ServicoService.Carregar(); // DAO deve filtrar por 'A'
+        List<Servico> listaServicos = ServicoService.Carregar(); 
 
         for (Servico servicoAtual : listaServicos) {
             tabela.addRow(new Object[]{
@@ -56,7 +56,7 @@ public class ControllerBuscaServico implements ActionListener {
             
             if (this.telaBusca.getjTFFiltro().getText().trim().equalsIgnoreCase("")) {
                  JOptionPane.showMessageDialog(null, "Informe o valor do filtro.");
-                 return; // Para se o filtro estiver vazio
+                 return;
             } 
             
             DefaultTableModel tabela = (DefaultTableModel) this.telaBusca.getjTableDados().getModel();
@@ -84,12 +84,12 @@ public class ControllerBuscaServico implements ActionListener {
 
                 case "Descrição":
                     colunaNoBanco = "descricao";
-                    listaServicos = ServicoService.Carregar(colunaNoBanco, valorFiltro); // DAO filtra por 'A'
+                    listaServicos = ServicoService.Carregar(colunaNoBanco, valorFiltro); 
                     break;
                     
                  default:
                      JOptionPane.showMessageDialog(null, "Opção de filtro desconhecida: " + filtroSelecionado);
-                     return; // Sai se o filtro não for reconhecido
+                     return;
             }
 
 

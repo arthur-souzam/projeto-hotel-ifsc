@@ -23,7 +23,7 @@ public class TelaCadastroVeiculo extends javax.swing.JDialog {
     public JPanel getjPanelBotoes() { return jPanelBotoes; }
     public JPanel getjPanelDados() { return jPanelDados; }
     public JTextField getjTextFieldId() { return jTextFieldId; }
-    public JFormattedTextField getjFormattedTextFieldPlaca() { return jFormattedTextFieldPlaca; } // Alterado
+    public JFormattedTextField getjFormattedTextFieldPlaca() { return jFormattedTextFieldPlaca; } 
     public JTextField getjTextFieldCor() { return jTextFieldCor; }
     public JComboBox<Modelo> getjComboBoxModelo() { return jComboBoxModelo; }
     public JTextField getjTextFieldStatus() { return jTextFieldStatus; }
@@ -44,7 +44,7 @@ public class TelaCadastroVeiculo extends javax.swing.JDialog {
         jLabelId = new javax.swing.JLabel();
         jTextFieldId = new javax.swing.JTextField();
         jLabelPlaca = new javax.swing.JLabel();
-        jFormattedTextFieldPlaca = new javax.swing.JFormattedTextField(); // Alterado
+        jFormattedTextFieldPlaca = new javax.swing.JFormattedTextField();
         jLabelCor = new javax.swing.JLabel();
         jTextFieldCor = new javax.swing.JTextField();
         jLabelModelo = new javax.swing.JLabel();

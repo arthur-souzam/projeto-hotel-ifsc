@@ -102,7 +102,6 @@ public class QuartoDAO implements InterfaceDAO<Quarto> {
     @Override
     public List<Quarto> Retrieve(String atributo, String valor) {
          String colunaBusca = atributo;
-         // Ajuste para nomes de coluna, se necessário (ex: capacidade_hospedes)
          if (atributo.equalsIgnoreCase("identificacao")) {
              colunaBusca = "identificacao";
          } else if (atributo.equalsIgnoreCase("andar")) {

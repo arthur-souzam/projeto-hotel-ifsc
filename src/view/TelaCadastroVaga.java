@@ -174,7 +174,7 @@ public class TelaCadastroVaga extends javax.swing.JDialog {
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            TelaCadastroVaga dialog = new TelaCadastroVaga(new javax.swing.JFrame(), true); // Renomeado
+            TelaCadastroVaga dialog = new TelaCadastroVaga(new javax.swing.JFrame(), true); 
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

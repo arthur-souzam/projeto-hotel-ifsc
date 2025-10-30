@@ -71,7 +71,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         jPanelTitulo.setPreferredSize(new java.awt.Dimension(700, 50));
         jPanelTitulo.setLayout(new java.awt.BorderLayout());
 
-        jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); 
         jLabelTitulo.setForeground(new java.awt.Color(51, 0, 153));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Cadastro de Quarto");
@@ -82,35 +82,35 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelBotoes.setPreferredSize(new java.awt.Dimension(700, 50));
 
-        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Create.png"))); // NOI18N
+        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Create.png")));
         jButtonNovo.setText("Novo");
         jButtonNovo.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonNovo);
 
-        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cancel.png"))); // NOI18N
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cancel.png"))); 
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setEnabled(false);
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonCancelar);
 
-        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Go.png"))); // NOI18N
+        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Go.png"))); 
         jButtonGravar.setText("Gravar");
         jButtonGravar.setEnabled(false);
         jButtonGravar.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonGravar);
 
-        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); // NOI18N
+        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); 
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonBuscar);
 
-        jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delete.png"))); // NOI18N
+        jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delete.png"))); 
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.setEnabled(false);
         jButtonExcluir.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonExcluir);
 
-        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Exit.png"))); // NOI18N
+        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Exit.png"))); 
         jButtonSair.setText("Sair");
         jButtonSair.setPreferredSize(new java.awt.Dimension(110, 35));
         jPanelBotoes.add(jButtonSair);

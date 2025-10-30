@@ -11,7 +11,7 @@ public class ServicoService {
         servicoDAO.Create(objeto);
     }
     
-    public static List<Servico> Carregar() { // Adicionado Carregar sem parâmetros
+    public static List<Servico> Carregar() {
         ServicoDAO servicoDAO = new ServicoDAO();
         return servicoDAO.Retrieve();
     }
